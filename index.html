@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EFSB 69T Pre-Filing Engagement Checklist</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --slate-900: #1E2535;
+    --slate-800: #27334A;
+    --slate-700: #364259;
+    --slate-500: #64748B;
+    --slate-400: #94A3B8;
+    --slate-200: #E2E8F0;
+    --slate-100: #F1F5F9;
+    --slate-50:  #F8FAFC;
+
+```
+--teal-700:  #0F766E;
+--teal-600:  #0D9488;
+--teal-100:  #CCFBF1;
+--teal-50:   #F0FDFA;
+
+--amber-600: #D97706;
+--amber-100: #FEF3C7;
+--amber-50:  #FFFBEB;
+
+--red-700:   #B91C1C;
+--red-100:   #FEE2E2;
+
+--env-color: #166534;
+--env-bg:    #DCFCE7;
+
+--phase-1: #1E3A5F;
+--phase-2: #1D4E6B;
+--phase-3: #145246;
+--phase-4: #4C1D78;
+--phase-5: #7C1D1D;
+
+--complete:  #16A34A;
+--border:    #DDE3EE;
+--bg:        #F4F6FB;
+--text:      #1E2535;
+--muted:     #64748B;
+--white:     #FFFFFF;
+```
+
+}
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: ‘Source Sans 3’, sans-serif;
+background: var(–bg);
+color: var(–text);
+min-height: 100vh;
+-webkit-font-smoothing: antialiased;
+}
+
+/* ── HEADER ───────────────────────────────────────────── */
+.header {
+background: var(–slate-900);
+color: white;
+padding: 36px 48px 30px;
+position: relative;
+overflow: hidden;
+}
+.header::after {
+content: ‘’;
+position: absolute;
+left: 0; top: 0; bottom: 0;
+width: 4px;
+background: var(–teal-600);
+}
+.header::before {
+content: ‘’;
+position: absolute;
+inset: 0;
+background-image: radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px);
+background-size: 24px 24px;
+pointer-events: none;
+}
+.header-inner { max-width: 980px; margin: 0 auto; position: relative; }
+.header-top {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+margin-bottom: 16px;
+gap: 12px;
+flex-wrap: wrap;
+}
+.org-badge {
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+color: rgba(255,255,255,0.45);
+}
+.org-dot {
+width: 7px; height: 7px;
+border-radius: 50%;
+background: var(–teal-600);
+}
+.reg-tag {
+background: rgba(255,255,255,0.07);
+border: 1px solid rgba(255,255,255,0.14);
+border-radius: 4px;
+padding: 4px 10px;
+font-size: 10.5px;
+font-weight: 600;
+letter-spacing: 0.09em;
+color: rgba(255,255,255,0.5);
+white-space: nowrap;
+}
+.header h1 {
+font-family: ‘Libre Baskerville’, serif;
+font-size: 26px;
+font-weight: 700;
+line-height: 1.25;
+letter-spacing: -0.01em;
+color: white;
+margin-bottom: 5px;
+}
+.header-sub {
+font-size: 13px;
+color: rgba(255,255,255,0.45);
+font-weight: 300;
+letter-spacing: 0.01em;
+}
+.progress-bar-wrap {
+margin-top: 22px;
+display: flex;
+align-items: center;
+gap: 14px;
+}
+.progress-bar-track {
+flex: 1;
+height: 3px;
+background: rgba(255,255,255,0.1);
+border-radius: 4px;
+overflow: hidden;
+}
+.progress-bar-fill {
+height: 100%;
+background: var(–teal-600);
+border-radius: 4px;
+transition: width 0.4s ease;
+}
+.progress-label {
+font-size: 11.5px;
+font-weight: 600;
+color: rgba(255,255,255,0.5);
+white-space: nowrap;
+letter-spacing: 0.03em;
+}
+
+/* ── LEGEND ───────────────────────────────────────────── */
+.legend {
+max-width: 980px;
+margin: 0 auto;
+padding: 10px 48px 0;
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+align-items: center;
+}
+.legend-label {
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(–muted);
+margin-right: 2px;
+}
+.legend-tag {
+font-size: 9.5px;
+font-weight: 700;
+letter-spacing: 0.07em;
+padding: 2px 8px;
+border-radius: 3px;
+text-transform: uppercase;
+}
+
+/* ── CONTROLS ─────────────────────────────────────────── */
+.controls {
+max-width: 980px;
+margin: 0 auto;
+padding: 14px 48px;
+display: flex;
+align-items: center;
+gap: 8px;
+flex-wrap: wrap;
+border-bottom: 1px solid var(–border);
+background: var(–white);
+}
+.filter-label {
+font-size: 10.5px;
+font-weight: 700;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(–muted);
+margin-right: 4px;
+}
+.filter-btn {
+font-family: ‘Source Sans 3’, sans-serif;
+font-size: 12px;
+font-weight: 600;
+padding: 5px 13px;
+border-radius: 20px;
+border: 1.5px solid var(–border);
+background: white;
+color: var(–muted);
+cursor: pointer;
+transition: all 0.16s;
+letter-spacing: 0.02em;
+}
+.filter-btn:hover { border-color: var(–slate-700); color: var(–slate-700); }
+.filter-btn.active { background: var(–slate-900); border-color: var(–slate-900); color: white; }
+.controls-right { margin-left: auto; display: flex; gap: 8px; }
+.action-btn {
+font-family: ‘Source Sans 3’, sans-serif;
+font-size: 12px;
+font-weight: 600;
+padding: 5px 13px;
+border-radius: 6px;
+border: none;
+cursor: pointer;
+transition: all 0.16s;
+letter-spacing: 0.02em;
+}
+.btn-clear { background: var(–red-100); color: var(–red-700); }
+.btn-clear:hover { background: #FECACA; }
+.btn-print { background: var(–teal-700); color: white; }
+.btn-print:hover { background: var(–teal-600); }
+
+/* ── MAIN ─────────────────────────────────────────────── */
+.main {
+max-width: 980px;
+margin: 0 auto;
+padding: 28px 48px 72px;
+}
+
+/* ── PHASE SECTIONS ───────────────────────────────────── */
+.phase {
+margin-bottom: 20px;
+background: white;
+border-radius: 10px;
+border: 1px solid var(–border);
+overflow: hidden;
+box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.phase-header {
+padding: 15px 20px;
+display: flex;
+align-items: center;
+gap: 14px;
+cursor: pointer;
+user-select: none;
+transition: background 0.14s;
+}
+.phase-header:hover { background: var(–slate-50); }
+.phase-num {
+width: 28px; height: 28px;
+border-radius: 7px;
+display: flex; align-items: center; justify-content: center;
+font-size: 12.5px;
+font-weight: 700;
+color: white;
+flex-shrink: 0;
+}
+.phase-title-block { flex: 1; }
+.phase-title {
+font-family: ‘Libre Baskerville’, serif;
+font-size: 14.5px;
+font-weight: 700;
+letter-spacing: -0.01em;
+line-height: 1.3;
+color: var(–slate-900);
+}
+.phase-subtitle {
+font-size: 11.5px;
+color: var(–muted);
+margin-top: 2px;
+font-weight: 400;
+}
+.phase-meta { display: flex; align-items: center; gap: 10px; }
+.phase-count {
+font-size: 11.5px;
+font-weight: 600;
+color: var(–muted);
+letter-spacing: 0.02em;
+}
+.phase-toggle {
+color: var(–slate-400);
+font-size: 13px;
+transition: transform 0.2s;
+line-height: 1;
+}
+.phase.collapsed .phase-toggle { transform: rotate(-90deg); }
+.phase-progress-mini {
+width: 52px; height: 3px;
+background: var(–slate-200);
+border-radius: 3px;
+overflow: hidden;
+}
+.phase-progress-mini-fill {
+height: 100%;
+border-radius: 3px;
+transition: width 0.3s;
+}
+
+.phase-body { border-top: 1px solid var(–border); }
+.phase.collapsed .phase-body { display: none; }
+
+/* ── GROUPS ───────────────────────────────────────────── */
+.req-group { border-bottom: 1px solid #EEF2F8; }
+.req-group:last-child { border-bottom: none; }
+.req-group-label {
+padding: 10px 20px 5px 52px;
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 0.11em;
+text-transform: uppercase;
+color: var(–muted);
+}
+
+/* ── ITEMS ────────────────────────────────────────────── */
+.req-item {
+display: flex;
+align-items: flex-start;
+gap: 13px;
+padding: 11px 20px;
+transition: background 0.11s;
+cursor: pointer;
+}
+.req-item:hover { background: var(–slate-50); }
+.req-item.done { opacity: 0.5; }
+
+.checkbox {
+width: 17px; height: 17px;
+border-radius: 4px;
+border: 2px solid #CBD5E1;
+background: white;
+display: flex; align-items: center; justify-content: center;
+flex-shrink: 0;
+margin-top: 2px;
+transition: all 0.14s;
+cursor: pointer;
+}
+.checkbox.checked { border-color: var(–complete); background: var(–complete); }
+.checkbox.checked::after {
+content: ‘’;
+width: 8px; height: 4.5px;
+border-left: 2px solid white;
+border-bottom: 2px solid white;
+transform: rotate(-45deg) translateY(-1px);
+}
+
+.req-content { flex: 1; }
+.req-text {
+font-size: 13.5px;
+line-height: 1.55;
+color: var(–text);
+font-weight: 400;
+}
+.req-item.done .req-text { text-decoration: line-through; color: var(–muted); }
+.req-tags { display: flex; gap: 5px; margin-top: 5px; flex-wrap: wrap; }
+.tag {
+font-size: 9.5px;
+font-weight: 700;
+letter-spacing: 0.07em;
+padding: 2px 7px;
+border-radius: 3px;
+text-transform: uppercase;
+}
+.tag-reg     { background: #EFF2F8; color: #3D4F6B; }
+.tag-doc     { background: var(–amber-100); color: #854D0E; }
+.tag-timing  { background: #EEF9FF; color: #075985; }
+.tag-tdif    { background: #F3EEFF; color: #5B21B6; }
+.tag-env     { background: var(–env-bg); color: var(–env-color); }
+
+/* ── CALLOUT ──────────────────────────────────────────── */
+.deadline-callout {
+margin: 14px 20px 10px;
+background: var(–amber-50);
+border: 1px solid #FDE68A;
+border-left: 3px solid var(–amber-600);
+border-radius: 6px;
+padding: 11px 14px;
+font-size: 12.5px;
+line-height: 1.55;
+color: #78350F;
+}
+.deadline-callout strong { font-weight: 700; }
+
+/* ── FOOTER ───────────────────────────────────────────── */
+.footer-note {
+margin-top: 28px;
+padding: 16px 20px;
+background: white;
+border: 1px solid var(–border);
+border-radius: 10px;
+font-size: 12px;
+color: var(–muted);
+line-height: 1.65;
+}
+.footer-note strong { color: var(–text); font-weight: 600; }
+
+/* ── PRINT ────────────────────────────────────────────── */
+@media print {
+body { background: white; }
+.controls, .legend { display: none; }
+.phase { box-shadow: none; break-inside: avoid; page-break-inside: avoid; }
+.phase.collapsed .phase-body { display: block !important; }
+.header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+@media (max-width: 700px) {
+.header { padding: 24px 20px; }
+.controls, .main, .legend { padding-left: 16px; padding-right: 16px; }
+.header h1 { font-size: 21px; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- ══════════════  HEADER  ══════════════ -->
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-top">
+      <div class="org-badge"><div class="org-dot"></div>National Grid · Transmission Projects</div>
+      <div class="reg-tag">980 CMR 16.00 &nbsp;·&nbsp; M.G.L. c. 164 §69T</div>
+    </div>
+    <h1>EFSB Pre-Filing Engagement Checklist</h1>
+    <div class="header-sub">Pre-filing outreach requirements for LCTDIF / transmission line applications &nbsp;·&nbsp; Effective July 1, 2026</div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="globalProgress" style="width:0%"></div></div>
+      <div class="progress-label" id="globalLabel">0 / 0 complete</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════  LEGEND  ══════════════ -->
+
+<div class="legend">
+  <span class="legend-label">Tags:</span>
+  <span class="legend-tag" style="background:#EFF2F8;color:#3D4F6B;">§ Reg. Cite</span>
+  <span class="legend-tag" style="background:#FEF3C7;color:#854D0E;">📄 Deliverable</span>
+  <span class="legend-tag" style="background:#EEF9FF;color:#075985;">⏱ Timing</span>
+  <span class="legend-tag" style="background:#F3EEFF;color:#5B21B6;">⚡ TDIF</span>
+  <span class="legend-tag" style="background:#DCFCE7;color:#166534;">🌿 Environmental</span>
+</div>
+
+<!-- ══════════════  CONTROLS  ══════════════ -->
+
+<div class="controls">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" onclick="filterItems('all',this)">All Items</button>
+  <button class="filter-btn" onclick="filterItems('incomplete',this)">Incomplete</button>
+  <button class="filter-btn" onclick="filterItems('done',this)">Completed</button>
+  <button class="filter-btn" onclick="filterItems('doc',this)">📄 Deliverables</button>
+  <button class="filter-btn" onclick="filterItems('tdif',this)">⚡ TDIF-Specific</button>
+  <button class="filter-btn" onclick="filterItems('env',this)">🌿 Environmental</button>
+  <div class="controls-right">
+    <button class="action-btn btn-clear" onclick="clearAll()">Reset All</button>
+    <button class="action-btn btn-print" onclick="window.print()">Print / Save PDF</button>
+  </div>
+</div>
+
+<!-- ══════════════  MAIN  ══════════════ -->
+
+<div class="main">
+
+  <!-- ▌PHASE 1 ▐ -->
+
+  <div class="phase" id="phase1">
+    <div class="phase-header" onclick="togglePhase('phase1')">
+      <div class="phase-num" style="background:var(--phase-1)">1</div>
+      <div class="phase-title-block">
+        <div class="phase-title">Pre-Outreach Setup &amp; DPP / OEJE Kickoff</div>
+        <div class="phase-subtitle">Before the Pre-filing Outreach Period begins</div>
+      </div>
+      <div class="phase-meta">
+        <div class="phase-progress-mini"><div class="phase-progress-mini-fill" id="prog1" style="background:var(--phase-1);width:0%"></div></div>
+        <div class="phase-count" id="cnt1">0/0</div>
+        <div class="phase-toggle">▾</div>
+      </div>
+    </div>
+    <div class="phase-body">
+      <div class="deadline-callout"><strong>Timing:</strong> Before the Pre-filing Outreach Period officially begins. The period starts when you hold your first meeting with DPP and OEJE.</div>
+
+```
+  <div class="req-group">
+    <div class="req-group-label">Prepare Meeting Materials (≥2 weeks before DPP/OEJE meeting)</div>
+
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Prepare plain language Project description, including reason for the Project and location map</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-reg">§16.05</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Prepare summary of anticipated Project impacts and benefits</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-reg">§16.05</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc tdif">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Prepare list of alternative routes/sites under consideration</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-tdif">TDIF</span><span class="tag tag-reg">§16.05</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Draft Key Stakeholder list (public interest groups, abutters, municipalities, labor groups, Tribes, etc.)</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-reg">§16.02, §16.05</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Prepare list of Agency Consultations relevant to the Project and meetings already held or planned</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.05</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Prepare preliminary summary of potential environmental impacts for discussion with DPP/OEJE</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.05</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="req-group">
+    <div class="req-group-label">Launch Project Infrastructure</div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Launch Project webpage with initial information (see Phase 4 for full webpage requirements)</div>
+        <div class="req-tags"><span class="tag tag-timing">Start of Period</span><span class="tag tag-reg">§16.04(a)(7), §16.09</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Create Project email distribution list; begin adding Key Stakeholders as they are identified</div>
+        <div class="req-tags"><span class="tag tag-timing">Start of Period</span><span class="tag tag-reg">§16.04(c)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="req-group">
+    <div class="req-group-label">DPP &amp; OEJE Kickoff Meeting</div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Meet with DPP and OEJE (individually or jointly) to discuss proposed outreach plan and clarify pre-filing requirements — this officially starts the Pre-filing Outreach Period</div>
+        <div class="req-tags"><span class="tag tag-timing">Starts Period</span><span class="tag tag-reg">§16.04(b), §16.05</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+
+  <!-- ▌PHASE 2 ▐ -->
+
+  <div class="phase" id="phase2">
+    <div class="phase-header" onclick="togglePhase('phase2')">
+      <div class="phase-num" style="background:var(--phase-2)">2</div>
+      <div class="phase-title-block">
+        <div class="phase-title">Early Outreach: Agency Consultation &amp; Key Stakeholder Meetings</div>
+        <div class="phase-subtitle">Early in the Pre-filing Outreach Period</div>
+      </div>
+      <div class="phase-meta">
+        <div class="phase-progress-mini"><div class="phase-progress-mini-fill" id="prog2" style="background:var(--phase-2);width:0%"></div></div>
+        <div class="phase-count" id="cnt2">0/0</div>
+        <div class="phase-toggle">▾</div>
+      </div>
+    </div>
+    <div class="phase-body">
+      <div class="deadline-callout"><strong>Timing:</strong> Early in the Pre-filing Outreach Period. MEPA consultation and Key Stakeholder introductory meetings should occur before the first public meeting.</div>
+
+```
+  <div class="req-group">
+    <div class="req-group-label">MEPA Consultation (Required ≥ Once)</div>
+    <div class="req-item" onclick="toggle(this)" data-tags="env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Hold first consultation with MEPA Office — discuss regulatory compliance, best practices, and project-specific studies needed</div>
+        <div class="req-tags"><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-timing">Early / Required</span><span class="tag tag-reg">§16.04(e), §16.06</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="tdif env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Present route/site selection process, alternatives analysis, and locus maps with environmental resource constraints (wetlands, Article 97, rare species habitat, ACECs, M.G.L. c. 91 boundaries)</div>
+        <div class="req-tags"><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-tdif">TDIF</span><span class="tag tag-reg">§16.06(a)(7)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Discuss cumulative impact analysis tool and site suitability criteria; identify Burdened Areas using Commonwealth's Burdened Areas Map</div>
+        <div class="req-tags"><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.06(a)(8–10)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">List all anticipated Local, State, and Federal permits; provide draft applications and draft permits if available</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.06(a)(2–4)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Discuss decommissioning and site restoration plans per 980 CMR 1.10</div>
+        <div class="req-tags"><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.06(a)(12)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Confirm whether additional state/federal agencies should be consulted (per MEPA recommendation)</div>
+        <div class="req-tags"><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.06(a)(5)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="req-group">
+    <div class="req-group-label">Agency Consultation (Local &amp; State Permitting Agencies)</div>
+    <div class="req-item" onclick="toggle(this)" data-tags="env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Complete Agency Consultation with relevant Local Government and state permitting agencies — receive feedback on regulatory compliance and necessary pre-filing studies (e.g., wetlands delineation, endangered species surveys)</div>
+        <div class="req-tags"><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.04(f), §16.06</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc tdif env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Share preliminary environmental impact information and proposed avoidance/minimization/mitigation measures (Note: rare species data requires prior written approval from Mass Wildlife/NHESP per M.G.L. c. 66, §17D)</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.06(a)(11)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="req-group">
+    <div class="req-group-label">Key Stakeholder Introductory Meetings</div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Hold introductory one-on-one or joint meetings with Key Stakeholders (abutters, municipal officials, community organizations, labor groups, Tribes, etc.)</div>
+        <div class="req-tags"><span class="tag tag-timing">Early / Before 1st Public Mtg</span><span class="tag tag-reg">§16.04(c), §16.07</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="tdif">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Present route/site alternatives under consideration, preferred alternative, comparison of impacts, and proposed mitigation at Key Stakeholder meetings</div>
+        <div class="req-tags"><span class="tag tag-tdif">TDIF</span><span class="tag tag-reg">§16.07(a)(3)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Add all Key Stakeholders met to Project email distribution list; provide opt-out option in all emails (sent via blind copy)</div>
+        <div class="req-tags"><span class="tag tag-reg">§16.04(c)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Provide translated materials and interpretation upon request at Key Stakeholder meetings</div>
+        <div class="req-tags"><span class="tag tag-reg">§16.07(c)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Maintain meeting notes (date, participants, discussion points, key takeaways) for all Key Stakeholder, Agency Consultation, and Community meetings</div>
+        <div class="req-tags"><span class="tag tag-doc">Document</span><span class="tag tag-reg">§16.04(a)(4)</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+
+  <!-- ▌PHASE 3 ▐ -->
+
+  <div class="phase" id="phase3">
+    <div class="phase-header" onclick="togglePhase('phase3')">
+      <div class="phase-num" style="background:var(--phase-3)">3</div>
+      <div class="phase-title-block">
+        <div class="phase-title">Public Meetings (Two Required) &amp; Midpoint Checklist</div>
+        <div class="phase-subtitle">Throughout the Pre-filing Outreach Period</div>
+      </div>
+      <div class="phase-meta">
+        <div class="phase-progress-mini"><div class="phase-progress-mini-fill" id="prog3" style="background:var(--phase-3);width:0%"></div></div>
+        <div class="phase-count" id="cnt3">0/0</div>
+        <div class="phase-toggle">▾</div>
+      </div>
+    </div>
+    <div class="phase-body">
+      <div class="deadline-callout"><strong>Comment window:</strong> Remains open from the first public meeting announcement through at least 3 weeks after the second public meeting. All public comments must be considered before filing the Pre-filing Notice.</div>
+
+```
+  <div class="req-group">
+    <div class="req-group-label">First Public Meeting</div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Publicize first public meeting ≥2 weeks in advance using ≥2 outreach channels (e.g., email list, social media, flyers, local cable, door knocking)</div>
+        <div class="req-tags"><span class="tag tag-timing">≥2 Weeks Notice</span><span class="tag tag-reg">§16.08(a), §16.08(b)(6)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Hold first public meeting after addressing Key Stakeholder feedback — allow both in-person and virtual participation; record and upload presentation to Project webpage</div>
+        <div class="req-tags"><span class="tag tag-reg">§16.04(g)(1), §16.08(b)(1)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Translate meeting flyer, agenda, and presentation materials per Board Language Access Plan; provide simultaneous interpretation</div>
+        <div class="req-tags"><span class="tag tag-reg">§16.07(c), §16.08(b)(2–3)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Hold meeting at accessible time (evenings/weekends) and accessible location near transit/parking; consult Key Stakeholders on best time and place</div>
+        <div class="req-tags"><span class="tag tag-reg">§16.08(b)(4–5)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Collect sign-in sheet with participant names and organizational affiliations</div>
+        <div class="req-tags"><span class="tag tag-doc">Document</span><span class="tag tag-reg">§16.04(g)(5)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Include in materials: link to Intervenor Support Grant Program and instructions for requesting translation/interpretation</div>
+        <div class="req-tags"><span class="tag tag-reg">§16.08(a)(2–3)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Make paper copies of outreach materials available at municipal offices and public libraries in Project area</div>
+        <div class="req-tags"><span class="tag tag-reg">§16.08(a)(5)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="req-group">
+    <div class="req-group-label">Midpoint Submission to DPP (approx. halfway through Period)</div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Submit Pre-filing Engagement Status Checklist to DPP (with attestation that all statements are true)</div>
+        <div class="req-tags"><span class="tag tag-doc">Required Filing</span><span class="tag tag-timing">Midpoint</span><span class="tag tag-reg">§16.02, §16.04(d)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Include with Status Checklist: list of meetings held to date (date/time/location), summary of how site suitability criteria and Agency Consultation are informing design, summary of agency-proposed improvements, and comment table</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.04(d)(1–4)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Send quarterly email updates to Project distribution list (new developments, design changes, public meeting details, estimated Pre-filing Notice date)</div>
+        <div class="req-tags"><span class="tag tag-doc">Ongoing</span><span class="tag tag-timing">Quarterly</span><span class="tag tag-reg">§16.04(c)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="req-group">
+    <div class="req-group-label">Second Public Meeting (before Pre-filing Notice)</div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Publicize second public meeting ≥2 weeks in advance; hold meeting prior to submitting the Pre-filing Notice</div>
+        <div class="req-tags"><span class="tag tag-timing">Before Pre-filing Notice</span><span class="tag tag-reg">§16.04(g)(2), §16.08(b)(6)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Present any Project design changes and explain how input from the first public meeting was considered</div>
+        <div class="req-tags"><span class="tag tag-reg">§16.04(g)(2)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Provide ≥3 weeks after second public meeting for written comments before filing the Pre-filing Notice</div>
+        <div class="req-tags"><span class="tag tag-timing">≥3-Week Comment Window</span><span class="tag tag-reg">§16.04(g)(4)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Follow same meeting logistics as first public meeting (in-person + virtual, translation, sign-in, recording, paper copies)</div>
+        <div class="req-tags"><span class="tag tag-reg">§16.08</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+
+  <!-- ▌PHASE 4 ▐ -->
+
+  <div class="phase" id="phase4">
+    <div class="phase-header" onclick="togglePhase('phase4')">
+      <div class="phase-num" style="background:var(--phase-4)">4</div>
+      <div class="phase-title-block">
+        <div class="phase-title">Project Webpage — Ongoing Requirements</div>
+        <div class="phase-subtitle">Established at start of period; maintained and updated throughout</div>
+      </div>
+      <div class="phase-meta">
+        <div class="phase-progress-mini"><div class="phase-progress-mini-fill" id="prog4" style="background:var(--phase-4);width:0%"></div></div>
+        <div class="phase-count" id="cnt4">0/0</div>
+        <div class="phase-toggle">▾</div>
+      </div>
+    </div>
+    <div class="phase-body">
+      <div class="req-group">
+        <div class="req-group-label">Required Webpage Content (§16.09)</div>
+        <div class="req-item" onclick="toggle(this)" data-tags="doc">
+          <div class="checkbox"></div>
+          <div class="req-content">
+            <div class="req-text">Plain language Project summary with benefits and impacts — translated per Board Language Access Plan</div>
+            <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-reg">§16.09(a)(1)</span></div>
+          </div>
+        </div>
+        <div class="req-item" onclick="toggle(this)" data-tags="doc">
+          <div class="checkbox"></div>
+          <div class="req-content">
+            <div class="req-text">Project description: size, footprint, plain language description of area and abutting properties — translated per Language Access Plan</div>
+            <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-reg">§16.09(a)(2)</span></div>
+          </div>
+        </div>
+        <div class="req-item" onclick="toggle(this)" data-tags="doc tdif env">
+          <div class="checkbox"></div>
+          <div class="req-content">
+            <div class="req-text">Location map(s) delineating project boundaries, components, key landmarks (schools, hospitals, parks, libraries), and natural features within 1 mile of Project boundary</div>
+            <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-tdif">TDIF</span><span class="tag tag-reg">§16.09(a)(3)</span></div>
+          </div>
+        </div>
+        <div class="req-item" onclick="toggle(this)" data-tags="doc tdif env">
+          <div class="checkbox"></div>
+          <div class="req-content">
+            <div class="req-text">For TDIF/transmission: route/site alternatives under active consideration, preferred alternative, comparison of anticipated health/environmental/safety impacts, and proposed mitigation</div>
+            <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-tdif">TDIF</span><span class="tag tag-reg">§16.09(a)(6)</span></div>
+          </div>
+        </div>
+        <div class="req-item" onclick="toggle(this)" data-tags="doc env">
+          <div class="checkbox"></div>
+          <div class="req-content">
+            <div class="req-text">Summary of how site suitability criteria and cumulative impacts analysis were incorporated into site/route selection</div>
+            <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.09(a)(4)</span></div>
+          </div>
+        </div>
+        <div class="req-item" onclick="toggle(this)" data-tags="doc">
+          <div class="checkbox"></div>
+          <div class="req-content">
+            <div class="req-text">Materials from Key Stakeholder meetings and Community meetings (slide decks, printed project info)</div>
+            <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-reg">§16.09(a)(7–8)</span></div>
+          </div>
+        </div>
+        <div class="req-item" onclick="toggle(this)" data-tags="doc">
+          <div class="checkbox"></div>
+          <div class="req-content">
+            <div class="req-text">Upcoming engagement events (dates, times, locations) and email list sign-up link with quarterly update description</div>
+            <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-reg">§16.09(a)(9–10)</span></div>
+          </div>
+        </div>
+        <div class="req-item" onclick="toggle(this)" data-tags="doc">
+          <div class="checkbox"></div>
+          <div class="req-content">
+            <div class="req-text">Project contact person(s) with email, phone, and mailing address; comment submission form with deadlines</div>
+            <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-reg">§16.09(a)(11–12)</span></div>
+          </div>
+        </div>
+        <div class="req-item" onclick="toggle(this)" data-tags="doc">
+          <div class="checkbox"></div>
+          <div class="req-content">
+            <div class="req-text">List of Key Stakeholder meetings (organization names, dates); summary of all feedback received and how it was considered in Project design</div>
+            <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-reg">§16.09(a)(13–14)</span></div>
+          </div>
+        </div>
+        <div class="req-item" onclick="toggle(this)" data-tags="doc env">
+          <div class="checkbox"></div>
+          <div class="req-content">
+            <div class="req-text">Translation/interpretation info; any waiver requests (approved or denied) with stakeholder comments; Agency Consultation comments from permitting agencies once received</div>
+            <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.09(a)(15–16, 20)</span></div>
+          </div>
+        </div>
+        <div class="req-item" onclick="toggle(this)" data-tags="doc">
+          <div class="checkbox"></div>
+          <div class="req-content">
+            <div class="req-text">Pre-filing Engagement Status and Completion Checklists (no personally identifiable information); prominent note about Intervenor Support Grant Program with link</div>
+            <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-reg">§16.09(a)(17–18)</span></div>
+          </div>
+        </div>
+        <div class="req-item" onclick="toggle(this)" data-tags="doc">
+          <div class="checkbox"></div>
+          <div class="req-content">
+            <div class="req-text">Pre-filing Notice (with translations) once filed; DPP Opinion once available</div>
+            <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-reg">§16.09(a)(19–20)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ▌PHASE 5 ▐ -->
+
+  <div class="phase" id="phase5">
+    <div class="phase-header" onclick="togglePhase('phase5')">
+      <div class="phase-num" style="background:var(--phase-5)">5</div>
+      <div class="phase-title-block">
+        <div class="phase-title">Pre-filing Notice &amp; Completion Checklist</div>
+        <div class="phase-subtitle">60–90 days before filing the Application with the Board</div>
+      </div>
+      <div class="phase-meta">
+        <div class="phase-progress-mini"><div class="phase-progress-mini-fill" id="prog5" style="background:var(--phase-5);width:0%"></div></div>
+        <div class="phase-count" id="cnt5">0/0</div>
+        <div class="phase-toggle">▾</div>
+      </div>
+    </div>
+    <div class="phase-body">
+      <div class="deadline-callout"><strong>Critical Window:</strong> The Pre-filing Notice must be filed no less than 60 days and no more than 90 days before submitting the Application. If the Application is not filed within 90 days, a new Pre-filing Notice is required.</div>
+
+```
+  <div class="req-group">
+    <div class="req-group-label">Pre-filing Notice (§16.10)</div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Submit Pre-filing Notice to DPP, the Board, and all Local Government and state permitting agencies consulted</div>
+        <div class="req-tags"><span class="tag tag-doc">Required Filing</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-timing">60–90 Days Before Filing</span><span class="tag tag-reg">§16.04(h), §16.10(1)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Email Pre-filing Notice to Project email distribution list and all relevant Key Stakeholders</div>
+        <div class="req-tags"><span class="tag tag-doc">Required Filing</span><span class="tag tag-reg">§16.10(1)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Post Pre-filing Notice (with translations per Language Access Plan) on Project webpage</div>
+        <div class="req-tags"><span class="tag tag-doc">Webpage</span><span class="tag tag-reg">§16.10(1)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Include in Notice: plain language summary, Project name, location map, anticipated filing date, link to Project webpage</div>
+        <div class="req-tags"><span class="tag tag-doc">Notice Content</span><span class="tag tag-reg">§16.10(3)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Submit to permitting agencies: draft permit applications and draft permits with recommended conditions for all applicable state/regional/local permits</div>
+        <div class="req-tags"><span class="tag tag-doc">Required Filing</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.10(2)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="req-group">
+    <div class="req-group-label">Pre-filing Engagement Completion Checklist &amp; Supporting Docs (§16.04(i))</div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Submit Pre-filing Engagement Completion Checklist to DPP, Board, and relevant Local/State agencies (with attestation)</div>
+        <div class="req-tags"><span class="tag tag-doc">Required Filing</span><span class="tag tag-reg">§16.04(i), §16.10(4)(a)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Submit to DPP: overview of all pre-filing consultation/engagement efforts — list of meetings by type (including Agency Consultation), date, location; outreach materials and recipients; meeting notes</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-reg">§16.04(i)(1)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Submit to DPP: full comment table — all oral and written comments received, how considered, and Project design modifications in response</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-reg">§16.04(i)(2)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc tdif env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Submit to DPP: description of how site suitability criteria and cumulative impact analysis tools were incorporated into site/route selection</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-tdif">TDIF</span><span class="tag tag-reg">§16.04(i)(3)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Submit to DPP: description of any partnerships or advisory bodies formed with Key Stakeholders/Community</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-reg">§16.04(i)(4)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Submit to DPP: any waiver/partial waiver requests (approved or not); copy of Pre-filing Engagement Status Checklist; update on community benefits plan/agreement discussions</div>
+        <div class="req-tags"><span class="tag tag-doc">Deliverable</span><span class="tag tag-reg">§16.04(i)(5–7)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="req-group">
+    <div class="req-group-label">DPP Opinion Process</div>
+    <div class="req-item" onclick="toggle(this)" data-tags="env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Allow 30-day window for Local Government and state agencies to file comments on pre-filing Agency Consultation with DPP and Applicant</div>
+        <div class="req-tags"><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-timing">30-Day Window</span><span class="tag tag-reg">§16.10(4)(b)</span></div>
+      </div>
+    </div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc env">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Submit Applicant response to agency comments within 7 days of receipt (optional but recommended)</div>
+        <div class="req-tags"><span class="tag tag-env">🌿 Environmental</span><span class="tag tag-timing">7-Day Response</span><span class="tag tag-reg">§16.10(4)(b)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="req-group">
+    <div class="req-group-label">Application Filing (§16.11)</div>
+    <div class="req-item" onclick="toggle(this)" data-tags="doc">
+      <div class="checkbox"></div>
+      <div class="req-content">
+        <div class="req-text">Include Pre-filing Engagement Completion Checklist and all supporting documentation (§16.04(i)) in the Application or Petition to Construct filed with the Board</div>
+        <div class="req-tags"><span class="tag tag-doc">Board Filing</span><span class="tag tag-reg">§16.11</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+
+  <div class="footer-note">
+    <strong>Regulation:</strong> 980 CMR 16.00 (M.G.L. c. 164, §§69J, 69J¼, 69T, 69U, 69V) &nbsp;·&nbsp; Effective February 27, 2026 &nbsp;·&nbsp; Applies to applications filed on or after <strong>July 1, 2026</strong><br>
+    <strong>Note:</strong> This checklist is for LCTDIF / transmission line rebuilds under §69T. Items tagged <strong>🌿 Environmental</strong> involve MEPA, Agency Consultation, or environmental permitting — coordinate with or defer to your Environmental Permitting lead and consultants on these items. Items tagged <strong>⚡ TDIF</strong> apply specifically to linear/transmission facilities. For waiver requests, submit in writing to DPP with supporting documentation (§16.03(1)).
+  </div>
+
+</div><!-- /main -->
+
+<script>
+  function toggle(item) {
+    item.querySelector('.checkbox').classList.toggle('checked');
+    item.classList.toggle('done');
+    updateProgress();
+    saveState();
+  }
+  function togglePhase(id) {
+    document.getElementById(id).classList.toggle('collapsed');
+  }
+  function updateProgress() {
+    let total = 0, done = 0;
+    ['phase1','phase2','phase3','phase4','phase5'].forEach((pid, i) => {
+      const items   = document.querySelectorAll(`#${pid} .req-item:not([style*="none"])`);
+      const checked = document.querySelectorAll(`#${pid} .req-item:not([style*="none"]) .checkbox.checked`);
+      const n = items.length, c = checked.length;
+      total += n; done += c;
+      document.getElementById(`prog${i+1}`).style.width = (n ? c/n*100 : 0) + '%';
+      document.getElementById(`cnt${i+1}`).textContent  = `${c}/${n}`;
+    });
+    document.getElementById('globalProgress').style.width = (total ? done/total*100 : 0) + '%';
+    document.getElementById('globalLabel').textContent    = `${done} / ${total} complete`;
+  }
+  function filterItems(type, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.req-item').forEach(item => {
+      const tags = item.dataset.tags || '', isDone = item.classList.contains('done');
+      let show = true;
+      if      (type==='incomplete') show = !isDone;
+      else if (type==='done')       show = isDone;
+      else if (type==='doc')        show = tags.includes('doc');
+      else if (type==='tdif')       show = tags.includes('tdif');
+      else if (type==='env')        show = tags.includes('env');
+      item.style.display = show ? '' : 'none';
+    });
+    document.querySelectorAll('.req-group').forEach(g => {
+      g.style.display = g.querySelectorAll('.req-item:not([style*="none"])').length ? '' : 'none';
+    });
+    updateProgress();
+  }
+  function clearAll() {
+    if (!confirm('Reset all checkboxes?')) return;
+    document.querySelectorAll('.checkbox.checked').forEach(cb => {
+      cb.classList.remove('checked');
+      cb.closest('.req-item').classList.remove('done');
+    });
+    updateProgress();
+    try { localStorage.removeItem('efsb_checklist'); } catch(e){}
+  }
+  function saveState() {
+    const s = {};
+    document.querySelectorAll('.req-item').forEach((item,i) => s[i] = item.classList.contains('done'));
+    try { localStorage.setItem('efsb_checklist', JSON.stringify(s)); } catch(e){}
+  }
+  function loadState() {
+    try {
+      const s = JSON.parse(localStorage.getItem('efsb_checklist') || '{}');
+      document.querySelectorAll('.req-item').forEach((item,i) => {
+        if (s[i]) { item.classList.add('done'); item.querySelector('.checkbox').classList.add('checked'); }
+      });
+    } catch(e){}
+  }
+  loadState();
+  updateProgress();
+</script>
+
+</body>
+</html>
